@@ -1,14 +1,14 @@
 import 'package:aula_10_08/telas/sobre.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +17,55 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: const Color(0xFF556B2F),
         foregroundColor: Colors.white,
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: const BoxDecoration(color: Colors.blue),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Image(
+                    width: 150,
+                    height: 100,
+                    image: AssetImage('images/upf.png'),
+                  ),
+                  Text(
+                    'App Aula',
+                    style: TextStyle(color: Colors.white, fontSize: 24),
+                  ),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.add),
+              title: const Text('Contador'),
+              onTap: () {
+                Navigator.pop(context); // close the drawer
+                Navigator.of(context).pushNamed('/contador');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.help),
+              title: const Text('Sobre o app'),
+              onTap: () {
+                Navigator.pop(context); // close the drawer
+                Navigator.of(context).pushNamed('/sobre');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.help),
+              title: const Text('Sobre o app'),
+              onTap: () {
+                Navigator.pop(context); // close the drawer
+                Navigator.of(context).pushNamed('/sobre');
+              },
+            ),
+          ],
+        ),
+      ),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
         child: Column(

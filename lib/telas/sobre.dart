@@ -20,17 +20,10 @@ class SobrePage extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.network(
-                'https://picsum.photos/400/300',
+              child: Image.asset(
+                'assets/images/trump.jpg',
                 height: 180,
                 fit: BoxFit.cover,
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) return child;
-                  return const SizedBox(
-                    height: 180,
-                    child: Center(child: CircularProgressIndicator()),
-                  );
-                },
                 errorBuilder: (context, error, stackTrace) {
                   return const SizedBox(
                     height: 180,
