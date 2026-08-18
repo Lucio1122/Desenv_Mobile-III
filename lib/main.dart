@@ -1,5 +1,6 @@
 import 'package:aula_10_08/telas/contador.dart';
 import 'package:aula_10_08/telas/home.dart';
+import 'package:aula_10_08/telas/login.dart';
 import 'package:aula_10_08/telas/sobre.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       home: const LoginPage(),
       routes: {
-        '/home': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
         '/contador': (context) =>
             const ContadorPage(title: 'Contador de Cliques'),
         '/sobre': (context) => const SobrePage(),

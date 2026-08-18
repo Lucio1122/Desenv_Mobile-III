@@ -1,14 +1,14 @@
 import 'package:aula_10_08/telas/sobre.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +52,14 @@ class _LoginPageState extends State<LoginPage> {
               onTap: () {
                 Navigator.pop(context); // close the drawer
                 Navigator.of(context).pushNamed('/sobre');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.help),
+              title: const Text('Sair'),
+              onTap: () {
+                Navigator.pop(context); // close the drawer
+                Navigator.pop(context);
               },
             ),
             ListTile(
