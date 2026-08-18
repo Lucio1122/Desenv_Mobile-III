@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
               title: const Text('Sair'),
               onTap: () {
                 Navigator.pop(context); // close the drawer
-                Navigator.pushReplacementNamed(context, '/login');
+                Navigator.pop(context);
               },
             ),
           ],
