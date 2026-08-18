@@ -21,9 +21,10 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 61, 206, 104),
         ),
       ),
-      home: const LoginPage(),
+      home: const HomePage(),
       routes: {
         '/home': (context) => const HomePage(),
+        '/login': (context) => const LoginPage(),
         '/contador': (context) =>
             const ContadorPage(title: 'Contador de Cliques'),
         '/sobre': (context) => const SobrePage(),

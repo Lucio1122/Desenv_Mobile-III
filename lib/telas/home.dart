@@ -39,6 +39,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
+              leading: const Icon(Icons.login),
+              title: const Text('Login'),
+              onTap: () {
+                Navigator.pop(context); // close the drawer
+                Navigator.of(context).pushNamed('/login');
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.add),
               title: const Text('Contador'),
               onTap: () {
@@ -55,19 +63,11 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.help),
+              leading: const Icon(Icons.logout),
               title: const Text('Sair'),
               onTap: () {
                 Navigator.pop(context); // close the drawer
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.help),
-              title: const Text('Sobre o app'),
-              onTap: () {
-                Navigator.pop(context); // close the drawer
-                Navigator.of(context).pushNamed('/sobre');
+                Navigator.pushReplacementNamed(context, '/login');
               },
             ),
           ],
